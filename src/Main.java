@@ -6,7 +6,7 @@ public class Main {
         int[]array={4,9,3,5};
         int[] arr = new int[]{6, 5, 4, 3, 2, 4, -9};
         bubbleSort(arr);
-
+        System.out.println("Наибольшее значение "+getMaxFromArray(array));
     }
 
     public static void bubbleSort(int[] arr) {
