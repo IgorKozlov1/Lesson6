@@ -3,9 +3,10 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-
+        int[]array={4,9,3,5};
         int[] arr = new int[]{6, 5, 4, 3, 2, 4, -9};
         bubbleSort(arr);
+
     }
 
     public static void bubbleSort(int[] arr) {
@@ -24,6 +25,15 @@ public class Main {
             System.out.println("Sorted array: " + Arrays.toString(arr));
         }
     }
+        private static int getMaxFromArray(int[]array){
+        int indexOfMax=0;
+            for (int i = 1; i <array.length ; i++) {
+                if(array[i]>array[indexOfMax]){
+                    indexOfMax=i;
+                }
+            }
+            return array[indexOfMax];
+        }
 
 }
 
