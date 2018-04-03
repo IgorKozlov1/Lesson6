@@ -3,10 +3,11 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        int[]array={4,9,3,5};
+        int[] array = {4, 9, 3, 5};
         int[] arr = new int[]{6, 5, 4, 3, 2, 4, -9};
         bubbleSort(arr);
-        System.out.println("Наибольшее значение "+getMaxFromArray(array));
+        System.out.println("Наибольшее значение " + getMaxFromArray(array));
+        System.out.println("наименьшее значение " + getMinFromArray(array));
     }
 
     public static void bubbleSort(int[] arr) {
@@ -25,16 +26,26 @@ public class Main {
             System.out.println("Sorted array: " + Arrays.toString(arr));
         }
     }
-        private static int getMaxFromArray(int[]array){
-        int indexOfMax=0;
-            for (int i = 1; i <array.length ; i++) {
-                if(array[i]>array[indexOfMax]){
-                    indexOfMax=i;
-                }
+
+    private static int getMaxFromArray(int[] array) {
+        int indexOfMax = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > array[indexOfMax]) {
+                indexOfMax = i;
             }
-            return array[indexOfMax];
         }
+        return array[indexOfMax];
+    }
+
+    private static int getMinFromArray(int[] array) {
+        int indexOfMin = 0;
+        for (int i = 1; i <array.length; i++) {
+            if (array[i] <array[indexOfMin]) {
+                indexOfMin = i;
+            }
+        }
+        return array[indexOfMin];
+
+    }
 
 }
-
-
